@@ -67,7 +67,21 @@ body {
 }
 
 .greeting-card {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin: 2px;
+}
+
+.greet-p {
+    margin-top: 3px;
+    font-size: 2rem;
+}
+
+#greet-time {
+    font-weight: bold;
+    border: 1px solid ;
+    border-radius: 50px;
+    
+
 }
 
 .quote-card {
