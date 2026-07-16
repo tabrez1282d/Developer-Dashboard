@@ -1,8 +1,9 @@
 let greet = document.querySelector("#greet-time");
 let currentTime = new Date().getHours();
 let clockElement = document.querySelector("#clock");
+let timeElement = document.querySelector("#timeDate");
 
-console.log(currentTime);
+
 
 
 if (currentTime >= 21 || currentTime <= 5) {
@@ -32,4 +33,19 @@ function clock() {
 }
   clock();
   setInterval(clock, 1000);
+
+  function date() {
+    let today = new Date();
+
+    let day = today.getDate();
+    let month = today.getMonth();
+    let year = today.getFullYear();
+
+    let mainMonth = month + 1;
+
+    timeElement.textContent = `${day} - ${mainMonth} - ${year}`;
+  }
+  
+  date();
+ 
  
