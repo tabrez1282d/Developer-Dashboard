@@ -7,16 +7,16 @@ let timeElement = document.querySelector("#timeDate");
 
 
 if (currentTime >= 21 || currentTime <= 5) {
-    greet.innerHTML = "🌙 Night, Human" ;
+    greet.textContent = "🌙 Night, Human" ;
 }
 else if (currentTime>= 6 && currentTime<= 11) {
-    greet.innerHTML ="☀️ Good Morning, Human";
+    greet.textContent ="☀️ Good Morning, Human";
 }
 else if (currentTime >= 12 && currentTime <= 15) {
-    greet.innerHTML = "🌤️ Good Afternoon, Human";
+    greet.textContent = "🌤️ Good Afternoon, Human";
 }
 else if (currentTime >= 16 && currentTime <= 20) {
-    greet.innerHTML ="🌇 Good Evening, Human";
+    greet.textContent ="🌇 Good Evening, Human";
 }
 
 function clock() {
@@ -26,9 +26,34 @@ function clock() {
     let minutes =clockTime.getMinutes();
     let seconds = clockTime.getSeconds();
 
+    let displayHours;
+    let displayMinutes;
+    let displaySeconds;
+
+    if (hours<10) {
+        displayHours = "0" + hours;
+    }
+    else {
+        displayHours = hours;
+    }
+
+    if (minutes<10) {
+        displayMinutes = "0" + minutes;
+    }
+    else {
+        displayMinutes = minutes;
+    }
+
+    if (seconds<10) {
+        displaySeconds = "0" + seconds;
+    }
+    else {
+        displaySeconds  = seconds;
+    }
+
       
     
-    clockElement.textContent = `${hours} : ${minutes} : ${seconds}`;
+    clockElement.textContent = `${displayHours} : ${displayMinutes} : ${displaySeconds}`;
     
 }
   clock();
@@ -41,9 +66,27 @@ function clock() {
     let month = today.getMonth();
     let year = today.getFullYear();
 
-    let mainMonth = month + 1;
+    let displayDay;
+    let displayMonth;
+    
 
-    timeElement.textContent = `${day} - ${mainMonth} - ${year}`;
+    let currentMonth = month + 1;
+
+    if (day<10) {
+        displayDay = "0" + day;
+    }
+    else {
+        displayDay = day;
+    }
+
+    if (currentMonth<10) {
+        displayMonth = "0" + currentMonth;
+    }
+    else {
+        displayMonth = currentMonth;
+    }
+
+    timeElement.textContent = `${displayDay} - ${displayMonth} - ${year}`;
   }
   
   date();
