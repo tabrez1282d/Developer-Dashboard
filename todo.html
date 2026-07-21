@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Dashboard</title>
+    
+</head>
+<body>
+    <header class="header">
+        <a class="maindashboard" href="index.html"> &#8592; Dashboard</a>
+        <div> Task Manager</div>
+    </header>
+
+    <main class="todo-dashboard">
+
+        <section class="card add-task">
+        <h2> Add New Task</h2>
+        <label for="task-input">Task Title</label>
+        <input type="text" id="task-input">
+        <label for="enter-date">Due Date</label>
+        <input type="date" id="enter-date">
+        <button id="add-button">Add Task</button>
+        <hr>
+        </section>
+
+        <section class="card task-list">
+        <h2>All Task</h2>
+        <div class="tasks">
+
+        </div>
+        </section>
+    </main>
+
+    <script src="todo.js"></script>
+</body>
+</html>

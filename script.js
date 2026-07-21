@@ -5,7 +5,7 @@ let timeElement = document.querySelector("#timeDate");
 
 const monthArray = ["January", "February", "March", "April", "May","June", "July", "August", "September", "October", "November" , "December"] ;
 
-
+// hello to user base on time
 
 if (currentTime >= 21 || currentTime <= 5) {
     greet.textContent = "🌙 Night, Human" ;
@@ -19,6 +19,8 @@ else if (currentTime >= 12 && currentTime <= 15) {
 else if (currentTime >= 16 && currentTime <= 20) {
     greet.textContent ="🌇 Good Evening, Human";
 }
+
+// Time
 
 function clock() {
     let clockTime = new Date();
@@ -60,6 +62,7 @@ function clock() {
   clock();
   setInterval(clock, 1000);
 
+  // Date 
   function date() {
     let today = new Date();
 
@@ -70,7 +73,6 @@ function clock() {
     let displayMonth = monthArray[month];
     
 
-    // let currentMonth = month + 1;
 
     if (day<10) {
         displayDay = "0" + day;
@@ -78,15 +80,7 @@ function clock() {
     else {
         displayDay = day;
     }
-
-    // if (currentMonth<10) {
-    //     displayMonth = "0" + currentMonth;
-    // }
-    // else {
-    //     displayMonth = currentMonth;
-    // }
    
-
     timeElement.textContent = `${displayDay} - ${displayMonth} - ${year}`;
   }
   
