@@ -3,6 +3,7 @@ let currentTime = new Date().getHours();
 let clockElement = document.querySelector("#clock");
 let timeElement = document.querySelector("#timeDate");
 
+const monthArray = ["January", "February", "March", "April", "May","June", "July", "August", "September", "October", "November" , "December"] ;
 
 
 
@@ -66,11 +67,10 @@ function clock() {
     let month = today.getMonth();
     let year = today.getFullYear();
 
-    let displayDay;
-    let displayMonth;
+    let displayMonth = monthArray[month];
     
 
-    let currentMonth = month + 1;
+    // let currentMonth = month + 1;
 
     if (day<10) {
         displayDay = "0" + day;
@@ -79,12 +79,13 @@ function clock() {
         displayDay = day;
     }
 
-    if (currentMonth<10) {
-        displayMonth = "0" + currentMonth;
-    }
-    else {
-        displayMonth = currentMonth;
-    }
+    // if (currentMonth<10) {
+    //     displayMonth = "0" + currentMonth;
+    // }
+    // else {
+    //     displayMonth = currentMonth;
+    // }
+   
 
     timeElement.textContent = `${displayDay} - ${displayMonth} - ${year}`;
   }
