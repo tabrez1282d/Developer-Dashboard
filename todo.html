@@ -16,20 +16,27 @@
     <main class="todo-dashboard">
 
         <section class="card add-task">
-        <h2> Add New Task</h2>
-        <label for="task-input">Task Title</label>
-        <input type="text" id="task-input">
-        <label for="enter-date">Due Date</label>
-        <input type="date" id="enter-date">
-        <button id="add-button">Add Task</button>
-        <hr>
+            <h2 class="heading"> Add New Task</h2>
+            <div class="groups">
+                <div class="title-group">
+                    <label for="task-input" class="label">Task Title</label>
+                    <input type="text" id="task-input" >
+                </div>
+                <div class="date-group">
+                    <label for="enter-date" class="label">Due Date</label>
+                    <input type="date" id="enter-date">
+                </div>
+            </div>
+            <button id="add-button">Add Task</button>
+            
         </section>
+        
 
         <section class="card task-list">
-        <h2>All Task</h2>
-        <div class="tasks">
+            <h2 class="heading">All Task</h2>
+            <div class="tasks">
 
-        </div>
+            </div>
         </section>
     </main>
 

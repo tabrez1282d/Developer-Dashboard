@@ -1,2 +1,47 @@
+.input {
+    background-color: #D3D3D3;
+}
+
+.add-task {
+    padding: 50px;
+}
+
+.task-list {
+    padding: 50px;
+}
+
+.groups {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.title-group {
+    display:grid;
+    
+    margin: 5px;
+    width: 50%;
+}
+
+.date-group {
+    display: grid;
+    
+    margin: 5px;
+    width: 25%;
+}
+
+.label {
+    font-size: large;
+}
+
+.heading {
+    color: green;
+}
+
+#add-button {
+    background-color: orange;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
 
 
